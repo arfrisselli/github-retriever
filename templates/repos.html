@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User GitHub Repos</title>
+</head>
+<body>
+<h1>User GitHub Repos</h1>
+<ul>
+    {% for repo in repos %}
+    <li>
+        <strong>Name: </strong>{{ repo.name }}
+        <ul>
+            <li><strong>Description: </strong>{{ repo.description }}</li>
+            <li><strong>Language: </strong>{{ repo.language }}</li>
+            <li><strong>URL: </strong>{{ repo.html_url }}</li>
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
